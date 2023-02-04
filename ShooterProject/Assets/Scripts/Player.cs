@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-	private const float _speed = 7;
+	private const float SPEED = 7;
 	[SerializeField] private GameObject _bulletPrefab;
 	private float _force = 1500;
 
@@ -10,8 +10,8 @@ public class Player : MonoBehaviour
 
     private void Update()
 	{
-		float horizontalPosition = Input.GetAxis("Horizontal") * Time.deltaTime * _speed;
-		float verticalPosition = Input.GetAxis("Vertical") * Time.deltaTime * _speed;
+		float horizontalPosition = Input.GetAxis("Horizontal") * Time.deltaTime * SPEED;
+		float verticalPosition = Input.GetAxis("Vertical") * Time.deltaTime * SPEED;
 
 		transform.position += new Vector3(horizontalPosition,verticalPosition, 0);
 

@@ -21,9 +21,7 @@ public class Win : MonoBehaviour
 		scoreText.text = Score.ToString();
 
 		if (Score == _neededScore)
-		{
 			StartCoroutine(TransitionScene());
-		}
 	}
 
 	private IEnumerator TransitionScene()

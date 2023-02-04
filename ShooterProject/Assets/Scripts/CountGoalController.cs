@@ -13,9 +13,7 @@ public class CountGoalController : MonoBehaviour
     public void AddGoal()
     {
         if (Count < MAX_COUNT)
-        {
             Count++;
-        }
         else
             Count = MIN_COUNT;
     }
@@ -23,15 +21,10 @@ public class CountGoalController : MonoBehaviour
     public void RemoveGoal()
     {
         if (Count > MIN_COUNT)
-        {
             Count--;
-        }
         else
             Count = MAX_COUNT;
     }
 
-    private void Update()
-    {
-        _countText.text = Count.ToString();
-    }
+    private void Update() => _countText.text = Count.ToString();
 }

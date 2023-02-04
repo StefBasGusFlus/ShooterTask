@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnTarget : MonoBehaviour
@@ -46,6 +44,7 @@ public class SpawnTarget : MonoBehaviour
             _xPos = Random.Range(_xBoundsMin, _xBoundsMax);
             _yPos = Random.Range(_yBoundsMin, _yBoundsMax);
             _zPos = Random.Range(_zBoundsMin, _zBoundsMax);
+
             GameObject clone = Instantiate(_targetPrefab, new Vector3(_xPos, _yPos, _zPos), transform.rotation);
         }
     }
